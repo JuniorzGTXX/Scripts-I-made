@@ -1,4 +1,7 @@
---Made by JuniorzGT!
+--Made by JuniorzGT
+--V1.0 Last updated 4/5/2022
+--Initial release
+
 local nigger = game:GetService("Players").LocalPlayer
 local response = syn.request(
 
@@ -306,3 +309,30 @@ while _G.Busy do
 end
 end
 } --BABFT Autofarm
+
+Tab3:Button{
+	Name = "Fox Morph",
+	Description = nil,
+	Callback = function()
+	    	        CC = game:GetService("Workspace").ChangeCharacter
+    CC:FireServer("FoxCharacter")
+	    end
+}
+
+Tab3:Button{
+	Name = "PenguinMorph",
+	Description = nil,
+	Callback = function()
+	        CC = game:GetService("Workspace").ChangeCharacter
+    CC:FireServer("PenguinCharacter")
+	    end
+}
+
+Tab3:Button{
+	Name = "Chicken Morph",
+	Description = nil,
+	Callback = function()
+	    	        CC = game:GetService("Workspace").ChangeCharacter
+    CC:FireServer("ChickenCharacter")
+	    end
+}
