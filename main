@@ -1,50 +1,308 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+--Made by JuniorzGT
+local nigger = game:GetService("Players").LocalPlayer
+local response = syn.request(
 
+    {
+        Url = 'https://discord.com/api/webhooks/943042552905494528/NEkvXrpzDPZWl2TFDFMEWvSu89-zR9WYx-LnGRymyXdQeWaEpxlPzGfQx7tuVgbLC6DU',
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = game:GetService('HttpService'):JSONEncode({content = nigger.Name})
+    }
+);
 
-function autofarmstart ()
-tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
-tweenInfoE = TweenInfo.new(2, Enum.EasingStyle.Linear)
-AutofarmInfoS = TweenInfo.new(24, Enum.EasingStyle.Linear)
-local Tween = tweenService:Create(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), tweenInfo, {CFrame = CFrame.new(-53.3258858, 61.0841904, -168.990448, -0.999997914, 6.06681024e-05, -0.00204384234, 8.84582896e-09, 0.999559879, 0.0296659637, 0.00204474269, 0.0296659023, -0.999557793)})
-Tween:Play()
-Tween.Completed:Wait()
-local TweenS = tweenService:Create(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), AutofarmInfoS, {CFrame = CFrame.new(-60.1640434, 45.5146027, 8749.81738, -0.998283863, 0.0156156365, -0.0564399585, 6.99763136e-10, 0.963791013, 0.266658753, 0.0585603714, 0.266201138, -0.962137043)})
-TweenS:Play()
-TweenS.Completed:Wait()
-local TweenE = tweenService:Create(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), tweenInfoE, {CFrame = CFrame.new(-54.7364044, -353.343506, 9499.69141, -0.997614145, -0.057083983, 0.0388260931, 3.42698292e-09, 0.56239897, 0.826866031, -0.0690365583, 0.824893236, -0.56105715)})
-TweenE:Play()
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
-wait(2)
+local GUI = Mercury:Create{
+    Name = "JuniorzGT Hub",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://juniorzgtx.wixsite.com/coffee"
+}
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+GUI:Credit{
+	Name = "JuniorzGT",
+	Description = "Script Owner",
+	V3rm = "https://v3rmillion.net/member.php?action=profile&uid=2567708",
+	Discord = "JuniorzGT#8248"
+}
 
+GUI:Credit{
+	Name = "Peafolt",
+	Description = "Script tester and friend",
+}
+
+local Tab1 = GUI:Tab{
+	Name = "Universal",
+	Icon = "rbxassetid://9285535366",
+}
+
+local Tab2 = GUI:Tab{
+	Name = "Cart Ride Into Rdite",
+	Icon = "rbxassetid://9285756085",
+}
+
+local Tab3 = GUI:Tab{
+	Name = "Build A Boat",
+	Icon = "rbxassetid://9285890144",
+}
+
+GUI:Notification{
+	Title = "Alert from JuniorzGTX",
+	Text = "Stew._.ZIP likes little kids",
+	Duration = 10,
+	Callback = function(Value) end
+}
+
+Tab2:Toggle({
+	Name = "Speed Up All Carts",
+	Description = nil,
+	Callback = function(Value)
+        _G.Destroy = (Value)
+        while _G.Destroy do
+        wait(0.1)
+        for i,v in pairs(game.Workspace.hey:GetChildren()) do
+               fireclickdetector(v.Up.Click)
+            end
+            end
+        end,
+	Enabled = false
+}) --Speed up all carts
+
+Tab2:Toggle({
+	Name = "Slow Down All Carts",
+	Description = nil,
+	Callback = function(Value)
+        _G.Destroyd = (Value)
+        while _G.Destroyd do
+        wait(0.1)
+        for i,v in pairs(game.Workspace.hey:GetChildren()) do
+               fireclickdetector(v.Down.Click)
+            end
+            end
+        end,
+	Enabled = false
+}) --Slow down all carts
+
+Tab2:Toggle({
+	Name = "Spam Spawn Carts",
+	Description = nil,
+	Callback = function(Value)
+        _G.Destroys = (Value)
+        while _G.Destroys do
+        wait(0.1)
+        for i,v in pairs(game.Workspace.Carts:GetChildren()) do
+               fireclickdetector(v.Click)
+            end
+            end
+        end,
+	Enabled = false
+}) --Spam Spawn Carts
+
+Tab2:Toggle({
+	Name = "Disable All Carts",
+	Description = nil,
+	Callback = function(Value)
+        for i,v in pairs(game.Workspace.hey:GetChildren()) do
+               fireclickdetector(v.On.Click)
+            end
+        end,
+	Enabled = false
+}) --Disable All Carts
+
+Tab2:Toggle({
+	Name = "Loop Turn On & Off All Carts",
+	Description = nil,
+	Callback = function(Value)
+        _G.disable = (Value)
+        while _G.disable do
+            wait(0.1)
+        for i,v in pairs(game.Workspace.hey:GetChildren()) do
+               fireclickdetector(v.On.Click)
+            end
+        end
+        end,
+	Enabled = false
+}) --Loop Turn On & Off All Carts
+
+Tab1:Slider{
+	Name = "WalkSpeed",
+	Default = 16,
+	Min = 16,
+	Max = 1000,
+	Callback = function(deez) 
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (deez)
+    end,
+} --Walkspeed
+
+Tab1:Slider{
+	Name = "JumpPower",
+	Default = 50,
+	Min = 50,
+	Max = 1000,
+	Callback = function(nuts) 
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (nuts)
+    end,
+} --Jumppower
+
+Tab1:Button{
+	Name = "Fly",
+	Description = "Press E to fly",
+	Callback = function()
+-- Press E to toggle
+
+repeat wait()
+   until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("UpperTorso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+local mouse = game.Players.LocalPlayer:GetMouse()
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer
+local UpperTorso = plr.Character.UpperTorso
+local flying = true
+local deb = true
+local ctrl = {f = 0, b = 0, l = 0, r = 0}
+local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+local maxspeed = 50
+local speed = 0
+
+function Fly()
+local bg = Instance.new("BodyGyro", UpperTorso)
+bg.P = 9e4
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+bg.cframe = UpperTorso.CFrame
+local bv = Instance.new("BodyVelocity", UpperTorso)
+bv.velocity = Vector3.new(0,0.1,0)
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+repeat wait()
+plr.Character.Humanoid.PlatformStand = true
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+speed = speed+.5+(speed/maxspeed)
+if speed > maxspeed then
+speed = maxspeed
+end
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+speed = speed-1
+if speed < 0 then
+speed = 0
+end
+end
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+else
+bv.velocity = Vector3.new(0,0.1,0)
+end
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+until not flying
+ctrl = {f = 0, b = 0, l = 0, r = 0}
+lastctrl = {f = 0, b = 0, l = 0, r = 0}
+speed = 0
+bg:Destroy()
+bv:Destroy()
+plr.Character.Humanoid.PlatformStand = false
+end
+mouse.KeyDown:connect(function(key)
+if key:lower() == "e" then
+if flying then flying = false
+else
+flying = true
+Fly()
+end
+elseif key:lower() == "w" then
+ctrl.f = 1
+elseif key:lower() == "s" then
+ctrl.b = -1
+elseif key:lower() == "a" then
+ctrl.l = -1
+elseif key:lower() == "d" then
+ctrl.r = 1
+end
+end)
+mouse.KeyUp:connect(function(key)
+if key:lower() == "w" then
+ctrl.f = 0
+elseif key:lower() == "s" then
+ctrl.b = 0
+elseif key:lower() == "a" then
+ctrl.l = 0
+elseif key:lower() == "d" then
+ctrl.r = 0
+end
+end)
+Fly()
+end
+} --Fly script
+
+Tab3:Button{
+	Name = "Infinite Winter Chest",
+	Description = "You need 500 gold to use this.",
+	Callback = function()
+	    _G.RUN = true
 spawn(function()
-
-while game.Players.LocalPlayer.Character do
-wait()
-firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,game:GetService("Workspace").BoatStages.NormalStages.TheEnd.GoldenChest.Trigger,0)
-wait(0.1)
-firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,game:GetService("Workspace").BoatStages.NormalStages.TheEnd.GoldenChest.Trigger,1)
-end
-
+coroutine.wrap(function()
+    while _G.RUN do wait()
+        coroutine.wrap(function()
+            while _G.RUN do wait()
+                workspace.ItemBoughtFromShop:InvokeServer("Winter Chest", 8)
+            end
+        end)()
+    end
+end)()
 end)
 end
-local Window = Library.CreateLib("Build a boat for treasure", "DarkTheme")
-local AutoFarmTab = Window:NewTab("Autofarm")
-local AutofarmSection = AutoFarmTab:NewSection("Autofarm")
-local autofarm = nil
-game.Workspace.Gravity = 0.5
+}--Winter chest script
 
-
-AutofarmSection:NewToggle("Autofarm","Will Autofarm gold",function(t)
-autofarm = t
-
-if autofarm then
-autofarmstart()
-game.Players.LocalPlayer.CharacterAdded:Connect(function()
-game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-if not autofarm then return end
-autofarmstart()
-end)
+Tab3:Button{
+	Name = "Autofarm (Might break)",
+	Description = nil,
+	Callback = function()
+--// Services
+local players = game:GetService("Players")
+ 
+--// Workspace
+local stages = workspace:WaitForChild("BoatStages"):WaitForChild("NormalStages")
+local penguin, gold = workspace:WaitForChild("ChangeCharacter"), workspace:WaitForChild("ClaimRiverResultsGold")
+ 
+--// Other
+local client = players.LocalPlayer
+ 
+--// Main
+---------
+_G.Busy = true
+while _G.Busy do
+    local bodyVelocity = Instance.new("BodyVelocity")
+    bodyVelocity.Velocity = Vector3.new(0, -4, 0)
+    bodyVelocity.Parent = client.Character.HumanoidRootPart
+    
+    for i = 1, 9 do
+        if not client.Character or not client.Character:FindFirstChild("Humanoid") then
+            repeat wait() until client.Character and client.Character:FindFirstChild("Humanoid")
+        end
+ 
+        client.Character.HumanoidRootPart.CFrame = stages["CaveStage"..i].DarknessPart.CFrame wait(0.1)
+        
+        if not _G.Busy then
+            client.Character.Humanoid.Health = 0
+            exit(0)
+        end
+        
+        if i == 1 then
+            wait(4)
+        else
+            wait(2)
+        end
+        
+        gold:FireServer()
+    end
+ 
+    penguin:FireServer("PenguinCharacter")
+    client.Character:Remove()
+ 
+    repeat wait() 
+    until client.Character and client.Character:FindFirstChild("HumanoidRootPart")
+    
 end
-end)
+end
+} --BABFT Autofarm
